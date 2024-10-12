@@ -12,6 +12,11 @@ namespace ConsoleApp3
         public int ocenka;
         public DateTime data_ekzamena;
 
+        public string ToFullString()
+        {
+            return $"Название предмета: {nazvanie_predmeta} + Оценка: {ocenka} + Дата экзамена: {data_ekzamena}";
+        }
+
         public Exam() 
         {
             nazvanie_predmeta = "MATAN";

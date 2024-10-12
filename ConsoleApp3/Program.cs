@@ -19,6 +19,10 @@ namespace ConsoleApp3
 
             Student student1 = new Student();
 
+            Console.WriteLine("average grade: " + student1.GetAverageOcenka());
+
+            return;
+
             student1.dannie_studenta = person1;
 
             Console.WriteLine(person1.name);

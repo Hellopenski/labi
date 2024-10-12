@@ -17,7 +17,7 @@ namespace ConsoleApp3
         public Person()
         {
             name = "Danya";
-            familia = " Poltavskii";
+            familia = "Poltavskii";
             dateofbirth = new DateTime(2002, 04, 18);
         } 
 
@@ -42,6 +42,10 @@ namespace ConsoleApp3
         public DateTime Getdateofbirth()
         {
             return  dateofbirth;
+        }
+        public void Setdateofbirth(DateTime value)
+        {
+            dateofbirth = value;
         }
 
     }
