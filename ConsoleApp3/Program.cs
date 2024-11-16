@@ -19,6 +19,18 @@ namespace ConsoleApp3
 
             Student student1 = new Student();
 
+            
+            string daniie = student1.ToShortString();
+            string dannie1 = student1.ToFullString();
+
+
+
+            Exam exams = new Exam();
+            exams.nazvanie_predmeta = "Math";
+            exams.nazvanie_predmeta = "History";
+
+            student1.AddExams(new Exam("Math", 4, new DateTime(2024, 10, 10)), new Exam("C#", 5, new DateTime(2024, 10, 11)));
+
             Console.WriteLine("average grade: " + student1.GetAverageOcenka());
 
             return;
@@ -29,6 +41,10 @@ namespace ConsoleApp3
             Console.WriteLine(person1.familia);
             Console.WriteLine(person1.dateofbirth);
             Console.WriteLine(person1.education);
+
+
+
+
         }
     }
 }

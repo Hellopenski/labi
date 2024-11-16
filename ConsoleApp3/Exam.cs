@@ -23,5 +23,14 @@ namespace ConsoleApp3
             ocenka = 5;
             data_ekzamena = new DateTime(2024, 12, 27);
         }
+
+        public Exam(string nazvanie_predmeta,int ocenka, DateTime data_ekzamena)
+        {
+            this.nazvanie_predmeta = nazvanie_predmeta;
+            if (ocenka < 2)
+                Console.WriteLine("Не зачет");
+            else
+                this.ocenka = ocenka;
+        }
     }
 }

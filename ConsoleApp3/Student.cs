@@ -26,27 +26,29 @@ namespace ConsoleApp3
             return result / exams.Length ;
 
         }
-        public void AddExams(params Exam[] exams)
+        public void AddExams(params Exam[] newExams)
         {
-            exams[] tmp = new Exam[2];
+            Exam[] tmp = new Exam[exams.Length + newExams.Length];
+            for (int i=0;i<exams.Length;i++)
             {
-                for (i = 0; 3) ;
-                tmp[i] = 2;
+                newExams[i] = exams[i];
             }
+            for(int i = 0; i < newExams.Length; i++)
             {
-                for (int i = 0; i < 2) ;
-                tmp[i + 3] = [5];
+                newExams[exams.Length + i] = newExams[i];
             }
-            exams = tmp;
+            exams = newExams;
+
 
         }
         public string ToFullString()
         {
-            return $"{} + {} + {}";
+            return $"Имя{dannie_studenta} + Номер группы{nomera_gruppi} + Экзамен{exams} + Средний балл{GetAverageOcenka()}";
+
         }
         public string ToShortString()
         {
-            return $"{} + {} + {}";
+            return $"Имя{dannie_studenta} + Номер группы{nomera_gruppi} + Экзамен{exams} + Средний балл{GetAverageOcenka()}";
         }
         public Student() 
         {
@@ -63,7 +65,7 @@ namespace ConsoleApp3
                 new Exam()
                 {
                     data_ekzamena = new DateTime(2024,10,05),
-                    nazvanie_predmeta = "Literature",
+                    nazvanie_predmeta = "C#",
                     ocenka = 5
                 },
             };
