@@ -75,11 +75,12 @@ namespace Laba_3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(330, 234);
+            this.ClientSize = new System.Drawing.Size(328, 280);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnHello);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tbName);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.Text = "Свойства";
             this.Click += new System.EventHandler(this.Form1_Click);

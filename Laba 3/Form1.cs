@@ -39,5 +39,10 @@ namespace Laba_3
         {
             Application.Exit();
         }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
