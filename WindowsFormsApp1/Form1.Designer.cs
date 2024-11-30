@@ -198,6 +198,7 @@ namespace WindowsFormsApp1
             this.button1.TabIndex = 4;
             this.button1.Text = "Квадрат";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             this.button1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button1_MouseDown);
             this.button1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button1_MouseMove);
             this.button1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.button1_MouseUp);
@@ -228,6 +229,9 @@ namespace WindowsFormsApp1
             this.pictureBox1.Size = new System.Drawing.Size(600, 426);
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button1_MouseDown);
+            this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button1_MouseMove);
+            this.pictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.button1_MouseUp);
             // 
             // Form1
             // 
@@ -240,6 +244,9 @@ namespace WindowsFormsApp1
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button1_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button1_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.button1_MouseUp);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.toolsPanel.ResumeLayout(false);

@@ -45,16 +45,17 @@ namespace WindowsFormsApp1
         bool _mouseClicked = false;
         Color SelectedColor
         {
-            get { return Color.Red; }
+            get { return Color.Black; }
         }
         int SelectedSize
         {
             get { return trackBar1.Value; }
         }
         Brush _selectedBrush;
+
         private void button1_Click(object sender, EventArgs e)
         {
-
+            _selectedBrush = new QuadBrush(SelectedColor, SelectedSize);
         }
 
         private void button3_Click(object sender, EventArgs e)
