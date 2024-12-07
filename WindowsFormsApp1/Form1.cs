@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -92,6 +93,26 @@ namespace WindowsFormsApp1
                 _selectedBrush.Draw(pictureBox1.Image as Bitmap, _x, _y);
                 pictureBox1.Refresh();
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            g.SmoothingMode = SmoothingMode.AntiAlias;
+            int centerX = this.ClientSize.Width / 2;
+            int centerY = this.ClientSize.Height / 2;
+            int radius = 100;
+            DrawCircle(g, centerX, centerY, radius);
+        }
+
+        private void DrawCircle(Graphics g, int centerX, int centerY, int radius)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -16,7 +16,10 @@ namespace WindowsFormsApp1
             BrushColor = brushColor;
             Size = size;
         }
-        public abstract void Draw(Bitmap image, int x, int y);
+        public virtual void Draw(Bitmap image, int x, int y)
+        {
+
+        }
     }
     
 }
