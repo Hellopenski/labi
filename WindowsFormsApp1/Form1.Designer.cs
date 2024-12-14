@@ -45,8 +45,8 @@ namespace WindowsFormsApp1
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.selectedKrugButton = new System.Windows.Forms.Button();
+            this.selectedKvadratButton = new System.Windows.Forms.Button();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.drawPanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -150,8 +150,8 @@ namespace WindowsFormsApp1
             // 
             this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.selectedKrugButton);
+            this.groupBox1.Controls.Add(this.selectedKvadratButton);
             this.groupBox1.Controls.Add(this.trackBar1);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
@@ -180,29 +180,29 @@ namespace WindowsFormsApp1
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button2
+            // selectedKrugButton
             // 
-            this.button2.Location = new System.Drawing.Point(12, 81);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Круг";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            this.button2.Paint += new System.Windows.Forms.PaintEventHandler(this.button2_Paint);
+            this.selectedKrugButton.Location = new System.Drawing.Point(12, 81);
+            this.selectedKrugButton.Name = "selectedKrugButton";
+            this.selectedKrugButton.Size = new System.Drawing.Size(75, 23);
+            this.selectedKrugButton.TabIndex = 5;
+            this.selectedKrugButton.Text = "Круг";
+            this.selectedKrugButton.UseVisualStyleBackColor = true;
+            this.selectedKrugButton.Click += new System.EventHandler(this.selectedKrugButton_Click);
+            this.selectedKrugButton.Paint += new System.Windows.Forms.PaintEventHandler(this.selectedKrugButton_Paint);
             // 
-            // button1
+            // selectedKvadratButton
             // 
-            this.button1.Location = new System.Drawing.Point(12, 52);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Квадрат";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            this.button1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button1_MouseDown);
-            this.button1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button1_MouseMove);
-            this.button1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.button1_MouseUp);
+            this.selectedKvadratButton.Location = new System.Drawing.Point(12, 52);
+            this.selectedKvadratButton.Name = "selectedKvadratButton";
+            this.selectedKvadratButton.Size = new System.Drawing.Size(75, 23);
+            this.selectedKvadratButton.TabIndex = 4;
+            this.selectedKvadratButton.Text = "Квадрат";
+            this.selectedKvadratButton.UseVisualStyleBackColor = true;
+            this.selectedKvadratButton.Click += new System.EventHandler(this.selectedKvadratButton_Click);
+            this.selectedKvadratButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button1_MouseDown);
+            this.selectedKvadratButton.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button1_MouseMove);
+            this.selectedKvadratButton.MouseUp += new System.Windows.Forms.MouseEventHandler(this.button1_MouseUp);
             // 
             // trackBar1
             // 
@@ -276,12 +276,12 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Panel toolsPanel;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button selectedKvadratButton;
         private System.Windows.Forms.TrackBar trackBar1;
         private System.Windows.Forms.Panel drawPanel;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button selectedKrugButton;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

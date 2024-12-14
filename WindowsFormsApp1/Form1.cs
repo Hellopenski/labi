@@ -54,7 +54,7 @@ namespace WindowsFormsApp1
         }
         Brush _selectedBrush;
 
-        private void button1_Click(object sender, EventArgs e)
+        private void selectedKvadratButton_Click(object sender, EventArgs e)
         {
             _selectedBrush = new QuadBrush(SelectedColor, SelectedSize);
         }
@@ -64,11 +64,11 @@ namespace WindowsFormsApp1
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void selectedKrugButton_Click(object sender, EventArgs e)
         {
-
+            _selectedBrush = new QuadBrush(SelectedColor, SelectedSize);
         }
-       private void button1_MouseDown(object sender, MouseEventArgs e)
+        private void button1_MouseDown(object sender, MouseEventArgs e)
         {
             if (_selectedBrush == null)
             {
@@ -100,7 +100,7 @@ namespace WindowsFormsApp1
 
         }
 
-        private void button2_Paint(object sender, PaintEventArgs e)
+        private void selectedKrugButton_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;
             g.SmoothingMode = SmoothingMode.AntiAlias;
@@ -112,7 +112,16 @@ namespace WindowsFormsApp1
 
         private void DrawCircle(Graphics g, int centerX, int centerY, int radius)
         {
-            throw new NotImplementedException();
+            Pen pen = new Pen(Color.Blue, 2);
+            for (int x = -radius; x <= radius; x++)
+            {
+                int y = (int)Math.Sqrt(radius * radius - x * x);
+                g.DrawLine(pen, centerX + x, centerY + y, centerX + x, centerY + y);
+                g.DrawLine(pen, centerX + x, centerY - y, centerX + x, centerY - y);
+                g.DrawLine(pen, centerX - x, centerY + y, centerX - x, centerY + y);
+                g.DrawLine(pen, centerX - x, centerY - y, centerX - x, centerY - y);
+            }
+
         }
     }
 }
